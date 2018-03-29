@@ -11,3 +11,11 @@ Search tree.
    files->
 	>ArrayBst.h
 	>Arraybst.cpp
+3)create two binary search tree and merge them.
+   files->
+       >MergeBst.h
+       >Mergebst.cpp
+4)create a binary tree and then take two keys and print all value between that keys.
+   files->
+       >BstKeyInRange.h
+       >Bstkeyinrange.cpp       	
