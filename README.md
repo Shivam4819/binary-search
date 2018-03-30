@@ -18,4 +18,14 @@ Search tree.
 4)create a binary tree and then take two keys and print all value between that keys.
    files->
        >BstKeyInRange.h
-       >Bstkeyinrange.cpp       	
+       >Bstkeyinrange.cpp
+       
+5)create a binary search tree and find the height of left and right subtree.
+   file->
+       >HeightOfSubtree.h
+       >Heightofsubtree.cpp
+       
+6)create a binary search tree and find the successor of the particular data of the tree.
+    file->
+       >Successor.h
+       >Successor.cpp                     	

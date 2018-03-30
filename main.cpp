@@ -9,6 +9,7 @@
 #include "../q-set4/ArrayBst.h"
 #include "../q-set4/MergeBst.h"
 #include "BstKeyInRange.h"
+#include"Successor.h"
 using namespace std;
 
 
@@ -40,6 +41,19 @@ int main() {
     cout<<"k1-"<<k2<<"\t\t"<<"k2-"<<k2<<endl;
 
     b.display(b.getroot(),k1,k2);
+    
+    Successor i;
+    i.create();
+    cout<<"inorder traversal-";
+    i.inorder(i.getroot());
+    i.successor();
+    
+    
+    HeightOfSubtree h;
+    h.create();
+    cout<<"inorder traversal-";
+    h.inorder(h.getroot());
+    h.heightofbst();
     
     
     return 0;
