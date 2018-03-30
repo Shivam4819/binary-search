@@ -1,7 +1,12 @@
 #include<iostream>
 #include "MergeBst.h"
+#include <vector>
+#include <iterator>
+#include <algorithm>
 using namespace std;
 
+vector<int> v;
+vector<int >::iterator it;
 
 void MergeBst::create(){
     int x;
@@ -51,33 +56,47 @@ void MergeBst::insert(int x1){
 void MergeBst :: inorder(node *temp)
 {
 
- for(i=0;i<n;i++){      
+       
    if(temp != NULL)
    {
       inorder(temp->lc);
-      a[i]=temp->data;
-      
-      cout<<a[i]<<"  ";
+      v.push_back(temp->data);
       inorder(temp->rc);
    }
- }
+ 
 } 
 
-void MergeBst :: addarray(MergeBst m1,MergeBst m2){
-int A[6],n,y,j;
-j=0;
-n=3;
-y=3;
-for(i=0;i<n;i++){ 
-A[j++]=m1.a;
-cout<<"yo-"<<a[j++]<<endl;
-}
-for(i=0;i<y;i++){ 
-A[j++]=m2.a;
-cout<<"hi-"<<a[j++];
-}
-for(j=0;j<6;j++){ 
-cout<<A[j];
-}
+void MergeBst :: inordertravsersal(node *temp)
+{
 
+       
+   if(temp != NULL)
+   {
+      inordertravsersal(temp->lc);
+      cout<<temp->data;
+      inordertravsersal(temp->rc);
+   }
+ 
+} 
+void MergeBst :: addarray(int x){
+int m,flag;
+flag=x;
+
+    sort(v.begin(),v.end());
+
+    m=v.size();
+    int arr[m],info;
+    for(i=0;i<m;i++){
+    arr[i]=v[i];
+    }
+
+if(flag==1){
+    cout<<"content of merged tree->";
+    start=NULL;
+    for(i=0;i<m;i++){
+    info=arr[i];
+    insert(info);
+    }
+    inordertravsersal(start);
+  }
 }

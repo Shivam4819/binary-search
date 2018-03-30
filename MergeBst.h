@@ -23,11 +23,12 @@ public:
     void insert(int x);
     void inorder(node *);
     void display();
+    void inordertravsersal(node *temp);
     node *getroot()
     {
        return start;
     }
-    void addarray(MergeBst m1,MergeBst m2);
+    void addarray(int);
 
 };
 
